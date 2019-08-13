@@ -10,7 +10,7 @@ This project proposal will fulfill the following requirements:
 	1. Host a database of competencies and questions.
 	2. Provide a tool for selected competencies and questions to merge into two separate Word documents
 		a. Interview guide
-		b. selection matrix. 
+		b. Selection matrix. 
 
 The above functionalities #1 and #2 would be used by a small number of users (5 or 6 HR team members who would use the system regularly). The documents generated would then be distributed to relevant users (members of interview panels. This would save a significant amount of time. 
 
