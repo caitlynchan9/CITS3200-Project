@@ -32,18 +32,62 @@ The above functionalities #1 and #2 would be used by a small number of users (5 
 	3. Time Analysis of Project 
 	
 ## Build Setup: 
-	- 
-	- 
-	- 
+
+### Install homebrew. Paste into terminal
+	```
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	```
+### Install yarn v.1.17 or greater (to check version # type yarn -v in terminal)
+	```
+	brew install yarn
+	```
+### Install node v.12 or greater (to check version # type node -v in terminal )
+	```
+	brew install  node 
+	```
+
+## Project setup
+	```
+	yarn install
+	```
+
+### Compiles and hot-reloads for development
+	```
+	yarn run serve
+	```
+
+### Compiles and minifies for production
+	```
+	yarn run build
+	```
+
+### Run your tests
+	```
+	yarn run test
+	```
+
+### Lints and fixes files
+	```
+	yarn run lint
+	```
+
+### Run your end-to-end tests
+	```
+	yarn run test:e2e
+	```
+### Customize configuration
+	See [Configuration Reference](https://cli.vuejs.org/config/).
+
 ## Tech-stack used for this project: 
-	- NodeJS (JS Framework)
+	- ExpressJS (Back-end framework for node.js) 
 	- VueJS (Front-end Framework)
-	- MongoDB (Database) 
-	
+	- MongoDB (Database) with Heroku
+
 ## Development Team: 
 	- Caitlyn Chan 
-	- Hao Ho
 	- Timothy Eitel 
 	- Andrew Ha 
+	- Hao Ho
+	- Farruh Mavlonov
 	- Zhen You 
-	- Farruh Mavlonov 
+
