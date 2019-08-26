@@ -10,14 +10,15 @@ This project uses [Feathers](http://feathersjs.com). An open source web framewor
 
 Getting up and running is as easy as 1, 2, 3.
 
-1. Make sure you have [NodeJS](https://nodejs.org/) and [yarn](https://www.yarnjs.com/) installed.
+1. Make sure you have [NodeJS](https://nodejs.org/) and [yarn](https://yarnpkg.com/lang/en/) installed.
 2. Install your dependencies
 
     ```
     cd path/to/server; yarn install
     ```
 
-3. Start your development server
+3. Make sure you have [MongoDB](https://www.mongodb.com/) installed
+4. Start your development server
 
     ```
     yarn dev
