@@ -5,5 +5,30 @@
   "paginate": {
     "default": 10,
     "max": 50
-  }
+  },
+  "authentication": {
+    "secret": "b21bf74921591fd9563f75fdf481183c61841e4beb9f34135714c90c8b074f7b2775fba921dfaa5c737b40df31cce55a0c3d38c4c37671424a8e3bb31360ddb75501362ff726f09ab7f99feb4e8de2bf0dbba86326eb7d39ec9babaac2b570166a5e95b9c382e6b209819be9f1ebae4a183d1f02803f491e98a3cc566543eb8da79171a20c0f231ceb0b99d691854c80bff1a8793b460d15e1061a32c4e9ed89a9239f97f0312fb0df3e5f802866305efe4025cd9f3d63b3c296ae4e145799818234e583710f7c8b5530b11d4fec5e8d849f1c13ea751fb7f660634b909a39d981b14b9a2777812ea1950811d30cc66bf5bf66fdf42c2ce995c55e8be62911e0",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  },
+  "mongodb": "mongodb://localhost:27017/cits3200_project"
 }
