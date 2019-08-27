@@ -21,7 +21,7 @@ Getting up and running is as easy as 1, 2, 3.
 4. Start your development server
 
     ```
-    yarn dev
+    yarn serve
     ```
     --OR--
 
