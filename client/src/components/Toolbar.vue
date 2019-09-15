@@ -10,7 +10,7 @@
       <v-toolbar-title class="white--text">UWA Acquisition</v-toolbar-title>
     </v-toolbar>
 
-    <v-navigation-drawer color="grey lighten-1">
+    <v-navigation-drawer v-model="drawer" clipped color="grey lighten-1">
       <v-list rounded>
         <v-list-item-group v-model="item" color="indigo darken-4">
           <v-list-item v-for="(item, i) in items" :key="i" router :to="items.route">
@@ -32,11 +32,12 @@
   export default {
     data: () => ({
       item: 1,
+      drawer: true,
       items: [
-        { text: 'Home', icon: 'mdi-clock', route: '/' },
+        { text: 'Home', icon: 'mdi-home', route: '/' },
         { text: 'Competencies', icon: 'mdi-account', route: '/competencies' },
-        { text: 'Search', icon: 'mdi-flag', route: '/publish' },
-        { text: 'Logout', icon: 'mdi-flag', route: '/logout' },
+        { text: 'Search', icon: 'mdi-magnify', route: '/search' },
+        { text: 'Logout', icon: 'mdi-logout-variant', route: '/logout' },
       ],
     }),
   }
