@@ -1,42 +1,61 @@
 <template>
-  <nav>
-    <v-toolbar flat app color="indigo darken-4" height="150">
-      <v-toolbar-title>
-        <a>
-          <img src="@/assets/uwa-logo.png" alt="UWA logo" />
-        </a>
+  <v-card color="grey lighten-4" flat height="200px" tile>
+    <v-app-bar app extended clipped-left class="indigo darken-4">
+      <v-toolbar-title class="white--text">
+        <img class="mt-12" :src="require('@/assets/uwa-crest.png')" height="80" />
+        Talent Acquisition
       </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-toolbar-title class="white--text">UWA Acquisition</v-toolbar-title>
-    </v-toolbar>
 
-    <v-navigation-drawer permanent clipped color="grey lighten-1">
-      <v-list rounded>
-        <v-list-item-group v-model="item" color="indigo darken-4">
-          <v-list-item v-for="item in items" :key="item.text" @click="":to="item.route">
-            <v-list-item-icon>
-              <v-icon v-text="item.icon"></v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title v-text="item.text"></v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list-item-group>
+
+      <div class="flex-grow-1"></div>
+
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-navigation-drawer app class="indigo darken-1" clipped dark permanent>
+      <v-list>
+        <v-list-item v-for="item in items" :key="item.title" 
+        @click="":to="item.route">
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
+
+      <template v-slot:append>
+        <div class="pa-2">
+          <v-btn block>Logout</v-btn>
+        </div>
+      </template>
     </v-navigation-drawer>
-  </nav>
+  </v-card>
 </template>
 
 
 <script>
 export default {
-  data: () => ({
-    items: [
-      { text: "Home", icon: "mdi-home", route: "/" },
-      { text: "Competencies", icon: "mdi-account", route: "/competencies" },
-      { text: "Search", icon: "mdi-magnify", route: "/search" },
-      { text: "Logout", icon: "mdi-logout-variant", route: "/logout" }
-    ]
-  })
+  data() {
+    return {
+      items: [
+        { title: "Home", icon: "mdi-home", route: "/" },
+        { title: "Competencies", icon: "mdi-clipboard-list-outline", route: "/competencies" },
+        { title: "Search", icon: "mdi-magnify", route: "/search" }
+      ]
+    };
+  }
 };
 </script>
