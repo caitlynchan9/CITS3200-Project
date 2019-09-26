@@ -1,64 +1,36 @@
 <template>
-  <v-card>
-    <v-container class="pa-2" fluid>
-      <v-row>
-        <v-col>
-          <v-card class="indigo darken-4" dark>
-            <v-card-text class="white--text">
-              <div class="headline mb-2">LEADING & DECIDING</div>
-              <v-container fluid>
-                <v-checkbox
-                  v-model="ex4"
-                  label="1. Decigin and Initiating Action"
-                  color="white"
-                  value="red"
-                  hide-details
-                ></v-checkbox>
-              </v-container>
-            </v-card-text>
-          </v-card>
-        </v-col>
+  <div>
+    <div class="d-flex">Competencies</div>
 
-        <v-col>
-          <v-card class="indigo darken-4" dark>
-            <v-card-text class="white--text">
-              <div class="headline mb-2">SUPPORTING & CO-OPERATING</div>
-              <v-container fluid>
-                <v-checkbox
-                  v-model="ex4"
-                  label="2. Adhering to Principles and Values"
-                  color="white"
-                  value="red"
-                  hide-details
-                ></v-checkbox>
-              </v-container>
-            </v-card-text>
-          </v-card>
-        </v-col>
+    <v-expansion-panels v-model="panel" multiple>
+      <v-expansion-panel>
+        <v-expansion-panel-header>Competency 1</v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <v-checkbox label="Disabled"></v-checkbox>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
 
-        <v-col>
-          <v-card class="indigo darken-4" dark>
-            <v-card-text class="white--text">
-              <div class="headline mb-2">LEADING & DECIDING</div>
-              <v-container fluid>
-                <v-checkbox
-                  v-model="ex4"
-                  label="3. Relating and Networking"
-                  color="white"
-                  value="red"
-                  hide-details
-                ></v-checkbox>
-              </v-container>
-            </v-card-text>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-container>
-  </v-card>
+      <v-expansion-panel>
+        <v-expansion-panel-header>Competency 2</v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <v-checkbox label="Disabled"></v-checkbox>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+
+      <v-expansion-panel>
+        <v-expansion-panel-header>Competency 3</v-expansion-panel-header>
+        <v-expansion-panel-content>
+          <v-checkbox label="Disabled"></v-checkbox>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>
+  </div>
 </template>
 
 <script>
 export default {
-  data: () => ({})
+  data: () => ({
+    panel: [0, 1]
+  })
 };
 </script>
