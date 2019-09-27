@@ -1,33 +1,31 @@
 <template>
-  <v-card color="grey lighten-4" flat height="200px" tile>
+  <v-card>
     <v-app-bar app clipped-left class="indigo darken-4">
       <v-app-bar-nav-icon @click="drawer = !drawer" class="white--text"></v-app-bar-nav-icon>
       <v-toolbar-title class="white--text">
         <!-- <img class="mt-12" :src="require('@/assets/uwa-crest.png')" height="80" /> -->
-        Talent Acquisition
+        <v-btn 
+        text
+        dark>
+        Talent Acquisition</v-btn>
       </v-toolbar-title>
 
       <div class="flex-grow-1"></div>
 
       <v-toolbar-items>
         <v-btn text class="white--text">
-          <v-icon>mdi-home</v-icon>Home
-        </v-btn>
-        <v-btn text class="white--text">
-          <v-icon>mdi-account-supervisor-outline</v-icon>Competencies
+          <v-icon>mdi-account-badge-horizontal-outline</v-icon>Competencies
         </v-btn>
         <v-btn text class="white--text">
           <v-icon>mdi-magnify</v-icon>Search
         </v-btn>
+        <v-btn text class="white--text">
+          <v-icon>mdi-account</v-icon>Logout
+        </v-btn>
       </v-toolbar-items>
     </v-app-bar>
 
-    <v-navigation-drawer 
-    v-model="drawer" 
-    app 
-    class="indigo darken-1" 
-    clipped 
-    dark>
+    <v-navigation-drawer v-model="drawer" app class="indigo darken-1" clipped dark>
       <v-list>
         <v-list-item v-for="comp in competencies" :key="comp.title" @click.stop :to="comp.route">
           <v-list-item-icon>
