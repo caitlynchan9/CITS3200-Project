@@ -4,10 +4,7 @@
       <v-app-bar-nav-icon @click="drawer = !drawer" class="white--text"></v-app-bar-nav-icon>
       <v-toolbar-title class="white--text">
         <!-- <img class="mt-12" :src="require('@/assets/uwa-crest.png')" height="80" /> -->
-        <v-btn 
-        text
-        dark>
-        Talent Acquisition</v-btn>
+        <v-btn text dark>Talent Acquisition</v-btn>
       </v-toolbar-title>
 
       <div class="flex-grow-1"></div>
@@ -38,9 +35,25 @@
         </v-list-item>
       </v-list>
 
+      <v-list-group sub-group no-action>
+        <template v-slot:activator>
+          <v-list-item-content>
+            <v-list-item-title>Actions</v-list-item-title>
+          </v-list-item-content>
+        </template>
+        <v-list-item v-for="(crud, i) in cruds" :key="i" @click.stop>
+          <v-list-item-title v-text="crud[0]"></v-list-item-title>
+          <v-list-item-action>
+            <v-icon v-text="crud[1]"></v-icon>
+          </v-list-item-action>
+        </v-list-item>
+      </v-list-group>
+
       <template v-slot:append>
-        <div class="pa-2">
-          <v-btn block>Logout</v-btn>
+        <div class="pa-4">
+          <v-btn block>
+            <v-icon>mdi-account</v-icon>Logout
+          </v-btn>
         </div>
       </template>
     </v-navigation-drawer>
@@ -57,10 +70,15 @@ export default {
         { id: "Home", icon: "mdi-home", route: "/" },
         {
           id: "Competencies",
-          icon: "mdi-clipboard-list-outline",
+          icon: "mdi-account-badge-horizontal-outline",
           route: "/competencies"
-        },
-        { id: "Search", icon: "mdi-magnify", route: "/search" }
+        }
+        // { id: "Search", icon: "mdi-magnify", route: "/search" }
+      ],
+      cruds: [
+        ["Create new", "mdi-account-plus"],
+        ["View previous", "mdi-account-search"],
+        ["Delete old", "mdi-account-remove"]
       ]
     };
   }
