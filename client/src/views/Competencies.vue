@@ -1,7 +1,9 @@
 <template>
   <div>
-    <div class="d-flex mb-2 display-3 font-weight-medium indigo--text text--darken-2" >Competencies</div>
-    <div class="d-flex mb-10 ml-2 display-1 grey--text text--darken-1">Select the actions for each desired competency</div>
+    <div class="d-flex mb-2 display-3 font-weight-medium indigo--text text--darken-2">Competencies</div>
+    <div
+      class="d-flex mb-10 ml-2 display-1 grey--text text--darken-1"
+    >Select the actions for each desired competency</div>
 
     <v-layout column wrap>
       <v-flex xs12 md6></v-flex>
