@@ -67,7 +67,7 @@ export default {
     return {
       drawer: true,
       competencies: [
-        { id: "Home", icon: "mdi-home", route: "/" },
+        // { id: "Home", icon: "mdi-home", route: "/" },
         {
           id: "Competencies",
           icon: "mdi-account-badge-horizontal-outline",
