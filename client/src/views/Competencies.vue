@@ -21,7 +21,7 @@
           <div class="my-2">
             <v-tooltip left>
               <template v-slot:activator="{ on }">
-                <v-btn x-large color="indigo darken-3" dark v-on="on">Create Interview Guide</v-btn>
+                <v-btn x-large color="indigo darken-3" dark v-on="on" href="/Publish">Create Interview Guide</v-btn>
               </template>
               <span>Create an Interview Guide from the selected competencies</span>
             </v-tooltip>
@@ -31,6 +31,8 @@
     </v-layout>
   </div>
 </template>
+
+
 
 <script>
 export default {
@@ -55,19 +57,19 @@ export default {
       },
       {
         id: "3. Adhering to Principles and Values / Acting with Integrity",
-        questions: ["1", "2", "3"]
+        questions: ["What sort of ethics or values do you need to uphold in your work?", "Describe a time when you had to demonstrate high levels of integrity in your work and actions.", "Give an example of an occasion when you have been particularly careful to treat others fairly."]
       },
       {
         id: "4. Relating and Networking / Relating to Others",
-        questions: ["1", "2", "3"]
+        questions: ["Tell me about the last time that a new employee joined your work team.", "Give me an example where there was a disagreement amongst colleagues in your work team.", "Tell me of a time when you had to make contact with another team or department in order to get something done that was to the benefit of the team or yourself."]
       },
       {
         id: "5. Presenting and Communicating Information / Oral Communication",
-        questions: ["1", "2", "3"]
+        questions: ["How did you tailor it to suit the audience?", "Describe a time when you won an argument or debate.", "In what situations do you find it difficult to get your point across?"]
       },
       {
         id: "6. Writing and Reporting / Written Communication",
-        questions: ["1", "2", "3"]
+        questions: ["What kind of correspondence have you had to prepare in the past?", "Tell me about your experience of preparing reports.", "Give me an example of a time you modified a standard letter or briefing."]
       }
     ]
   })
