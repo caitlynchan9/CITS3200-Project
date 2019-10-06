@@ -287,7 +287,7 @@ var scale = [
 var scaleStyle = {
   tableColWidth: 0,
   tableSize: 10,
-  tableColor: "000000",
+  tableColor: "27348B",
   tableAlign: "center",
   tableFontFamily: "calibri",
   spacingBefor: 50, // default is 100
@@ -551,19 +551,469 @@ var scaleStyle5 = {
 
 docx.createTable (behavAssessment, scaleStyle5);
 
+pObj = docx.createP();
+
 
 pObj = docx.createP();
 pObj.addText('What strategies have you employed to ensure a major new directive from senior management was carried out?', { color: '000088', font_face: 'calibri', font_size: 12, indent:-300 })
 
 
 
+var openingTable = [
+  [{
+    val: "Opening",
+    opts: {
+      cellColWidth: 9750,
+      color: "FFFFFF",
+      b:true,
+      sz: '30',
+      align: "center",
+      vAlign: "center",
+      shd: {
+        fill: "27348B",
+
+        "themeFillTint": "80"
+      },
+
+    }
+  }
+
+  ],
+
+]
+
+var scaleStyle2 = {
+  tableColWidth: 0,
+  tableSize: 10,
+  tableColor: "FFFFFF",
+  tableAlign: "center",
+  tableFontFamily: "calibri",
+  spacingBefor: 50, // default is 100
+  spacingAfter: 50, // default is 100
+  spacingLine: 25, // default is 240
+  spacingLineRule: 'atLeast', // default is atLeast
+  indent: -300, // table indent, default is 0
+  fixedLayout: true, // default is false
+  borders: true, // default is false. if true, default border size is 4
+  borderSize: 2, // To use this option, the 'borders' must set as true, default is 4
+}
+
+docx.createTable (openingTable, scaleStyle2);
+
+
+var blankBox = [
+  [{
+    val: "\r\n \r\n \r\n \r\n \r\n \r\n \r\n \r\n \r\n \r\n \r\n \r\n \r\n \r\n \r\n \r\n \r\n ",
+    opts: {
+      cellColWidth: 9750,
+      b:false,
+      color: "27348B",
+      sz: '20',
+      align: "left",
+      vAlign: "center",
+      shd: {
+        fill: "FFFFFF",
+
+        "themeFillTint": "80"
+      },
+
+    }
+  }
+
+  ],
+
+]
+
+var scaleStyle4 = {
+  tableColWidth: 0,
+  tableSize: 10,
+  tableColor: "FFFFFF",
+  tableAlign: "center",
+  tableFontFamily: "calibri",
+  spacingBefor: 50, // default is 100
+  spacingAfter: 50, // default is 100
+  spacingLine: 25, // default is 240
+  spacingLineRule: 'atLeast', // default is atLeast
+  indent: -300, // table indent, default is 0
+  fixedLayout: true, // default is false
+  borders: true, // default is false. if true, default border size is 4
+  borderSize: 2, // To use this option, the 'borders' must set as true, default is 4
+}
+
+
+docx.createTable (blankBox, scaleStyle4);
+
+
+
+var scale = [
+  [{
+    val: "0",
+    opts: {
+      cellColWidth: 1625,
+      color: '27348B',
+      b:true,
+      sz: '24',
+      align: "center",
+      vAlign: "center",
+      shd: {
+        fill: "FFFFFF",
+
+        "themeFillTint": "80"
+      },
+
+    }
+  },
+  {
+    val: "1",
+    opts: {
+      b:true, // b = BOLD TEXT
+      color: "27348B",
+      align: "center",
+      vAlign: "center",
+      cellColWidth: 1625,
+      sz: '24',
+      shd: {
+        fill: "FFFFFF",
+
+        "themeFillTint": "80"
+      }
+    }
+  },
+  {
+    val: "2",
+    opts: {
+      align: "center",
+      vAlign: "center",
+      color: '27348B',
+      cellColWidth: 1625,
+      b:true,
+      sz: '24',
+      shd: {
+        fill: "FFFFFF",
+
+        "themeFillTint": "80"
+      }
+    }
+  },
+  {
+    val: "3",
+    opts: {
+      align: "center",
+      vAlign: "center",
+      color: '27348B',
+      cellColWidth: 1625,
+      b:true,
+      sz: '24',
+      shd: {
+        fill: "FFFFFF",
+
+        "themeFillTint": "80"
+      }
+    }
+  },
+  {
+    val: "4",
+    opts: {
+      align: "center",
+      vAlign: "center",
+      color: '27348B',
+      cellColWidth: 1625,
+      b:true,
+      sz: '24',
+      shd: {
+        fill: "FFFFFF",
+
+        "themeFillTint": "80"
+      }
+    }
+  },
+  {
+    val: "5",
+    opts: {
+      align: "center",
+      vAlign: "center",
+      color: '27348B',
+      cellColWidth: 1625,
+      b:true,
+      sz: '24',
+      shd: {
+        fill: "FFFFFF",
+
+        "themeFillTint": "80"
+      }
+    }
+  }
+],
+
+  [ { val:'Does Not Meet', opts: {sz:20}}, { val:'Limited', opts: {sz:20}}, { val:'Basic', opts: {sz:20}},
+  { val:'Proficient', opts: {sz:20}},
+{ val:'Excellent', opts: {sz:20}},{ val:'Outstanding', opts: {sz:20}}, ],
+
+
+
+]
+
+var scaleStyle = {
+  tableColWidth: 0,
+  tableSize: 10,
+  tableColor: "000000",
+  tableAlign: "center",
+  tableFontFamily: "calibri",
+  spacingBefor: 50, // default is 100
+  spacingAfter: 50, // default is 100
+  spacingLine: 25, // default is 240
+  spacingLineRule: 'atLeast', // default is atLeast
+  indent: -300, // table indent, default is 0
+  fixedLayout: true, // default is false
+  borders: true, // default is false. if true, default border size is 4
+  borderSize: 2, // To use this option, the 'borders' must set as true, default is 4
+}
+docx.createTable (scale, scaleStyle);
+
+
+docx.putPageBreak();
+
+
+//END OF PAGE 3
+
+
+
+
+pObj = docx.createP()
+pObj.addImage('uwalogo.jpg');
+
+
+var closingTable = [
+  [{
+    val: "Closing",
+    opts: {
+      cellColWidth: 9750,
+      color: "FFFFFF",
+      b:true,
+      sz: '30',
+      align: "center",
+      vAlign: "center",
+      shd: {
+        fill: "27348B",
+
+        "themeFillTint": "80"
+      },
+
+    }
+  }
+
+  ],
+  [{val:"What areas do you think you will need support or development in to effectively fulfill this role", opts:{sz:20}}]
+
+]
+
+var scaleStyle2 = {
+  tableColWidth: 0,
+  tableSize: 10,
+  tableColor: "27348B",
+  tableAlign: "left",
+  tableFontFamily: "calibri",
+  spacingBefor: 50, // default is 100
+  spacingAfter: 50, // default is 100
+  spacingLine: 25, // default is 240
+  spacingLineRule: 'atLeast', // default is atLeast
+  indent: -300, // table indent, default is 0
+  fixedLayout: true, // default is false
+  borders: false, // default is false. if true, default border size is 4
+  borderSize: 2, // To use this option, the 'borders' must set as true, default is 4
+}
+
+docx.createTable (closingTable, scaleStyle2);
+
+
+var blankBox = [
+  [{
+    val: " \r\n \r\n \r\n \r\n \r\n \r\n \r\n \r\n \r\n \r\n",
+    opts: {
+      cellColWidth: 9750,
+      b:false,
+      color: "27348B",
+      sz: '20',
+      align: "left",
+      vAlign: "center",
+      shd: {
+        fill: "FFFFFF",
+
+        "themeFillTint": "80"
+      },
+
+    }
+  }
+
+  ],
+
+]
+
+var scaleStyle4 = {
+  tableColWidth: 0,
+  tableSize: 10,
+  tableColor: "FFFFFF",
+  tableAlign: "center",
+  tableFontFamily: "calibri",
+  spacingBefor: 50, // default is 100
+  spacingAfter: 50, // default is 100
+  spacingLine: 25, // default is 240
+  spacingLineRule: 'atLeast', // default is atLeast
+  indent: -300, // table indent, default is 0
+  fixedLayout: true, // default is false
+  borders: true, // default is false. if true, default border size is 4
+  borderSize: 2, // To use this option, the 'borders' must set as true, default is 4
+}
+
+
+docx.createTable (blankBox, scaleStyle4);
 
 
 
 
 
 
+var questions1 = [
+  [{
+    val: "Do you have any questions for us?",
+    opts: {
+      cellColWidth: 9750,
+      b:false,
+      color: "27348B",
+      sz: '24',
+      align: "left",
+      vAlign: "center",
+      shd: {
+        fill: "FFFFFF",
 
+        "themeFillTint": "80"
+      },
+
+    }
+  }
+
+  ],
+
+]
+
+var scaleStyle3 = {
+  tableColWidth: 0,
+  tableSize: 10,
+  tableColor: "27348B",
+  tableAlign: "center",
+  tableFontFamily: "calibri",
+  spacingBefor: 50, // default is 100
+  spacingAfter: 50, // default is 100
+  spacingLine: 25, // default is 240
+  spacingLineRule: 'atLeast', // default is atLeast
+  indent: -300, // table indent, default is 0
+  fixedLayout: true, // default is false
+  borders: false, // default is false. if true, default border size is 4
+  borderSize: 2, // To use this option, the 'borders' must set as true, default is 4k
+}
+
+
+docx.createTable (questions1, scaleStyle3);
+
+
+
+var blankBox = [
+  [{
+    val: " \r\n \r\n \r\n \r\n \r\n",
+    opts: {
+      cellColWidth: 9750,
+      b:false,
+      color: "27348B",
+      sz: '20',
+      align: "left",
+      vAlign: "center",
+      shd: {
+        fill: "FFFFFF",
+
+        "themeFillTint": "80"
+      },
+
+    }
+  }
+
+  ],
+
+]
+
+var scaleStyle4 = {
+  tableColWidth: 0,
+  tableSize: 10,
+  tableColor: "FFFFFF",
+  tableAlign: "center",
+  tableFontFamily: "calibri",
+  spacingBefor: 50, // default is 100
+  spacingAfter: 50, // default is 100
+  spacingLine: 25, // default is 240
+  spacingLineRule: 'atLeast', // default is atLeast
+  indent: -300, // table indent, default is 0
+  fixedLayout: true, // default is false
+  borders: true, // default is false. if true, default border size is 4
+  borderSize: 2, // To use this option, the 'borders' must set as true, default is 4
+}
+
+
+docx.createTable (blankBox, scaleStyle4);
+
+pObj = docx.createP(); // make space
+
+var endInterview = [
+  [{
+    val: "End the Interview",
+    opts: {
+      cellColWidth: 9750,
+      b:true,
+      color: "27348B",
+      sz: '24',
+      align: "left",
+      vAlign: "center",
+      shd: {
+        fill: "FFFFFF",
+
+        "themeFillTint": "80"
+      },
+
+    }
+  }
+
+  ],
+
+
+
+]
+
+var endStyle = {
+  tableColWidth: 0,
+  tableSize: 10,
+  tableColor: "27348B",
+  tableAlign: "center",
+  tableFontFamily: "calibri",
+  spacingBefor: 50, // default is 100
+  spacingAfter: 50, // default is 100
+  spacingLine: 25, // default is 240
+  spacingLineRule: 'atLeast', // default is atLeast
+  indent: -300, // table indent, default is 0
+  fixedLayout: true, // default is false
+  borders: false, // default is false. if true, default border size is 4
+  borderSize: 2, // To use this option, the 'borders' must set as true, default is 4k
+}
+
+
+docx.createTable (endInterview, endStyle);
+
+
+
+pObj = docx.createP();
+
+pObj.addText('Explain the next steps in selection process (i.e. UWA Talent team will communicate decision by...)',{ color: '27348B' })
+pObj.addLineBreak()
+pObj.addText('Thank the candidate for a productive interview',{ color: '27348B' })
+pObj.addLineBreak()
+pObj.addText('End the interview',{ color: '27348B' })
 
 
 
