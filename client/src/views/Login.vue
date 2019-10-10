@@ -11,7 +11,7 @@
                 :rules="[() => !!username || 'Please enter your username']"
                 :error-messages="errorMessages"
                 label
-                placeholder="User Name"
+                placeholder="Username"
                 required
               ></v-text-field>
               <v-text-field
@@ -28,6 +28,7 @@
               <v-btn
                 dark
                 class="grey darken-4--text"
+                color="yellow darken-1"
                 :disabled="!valid || loading"
                 :loading="loading"
                 @click.stop.prevent="login"
@@ -43,6 +44,7 @@
 
 <script>
 import { mapState, mapActions } from "vuex";
+import uwaLogin from "../assets/uwalogin.svg";
 
 export default {
   name: "Login",
@@ -54,6 +56,7 @@ export default {
     valid: false,
     show: false,
     alert: false,
+    uwaLogin: true,
     error: "",
     rules: {
       required: v => !!v || "This field is required",
@@ -61,7 +64,10 @@ export default {
     }
   }),
   computed: {
-    ...mapState("auth", { loading: "isAuthenticatePending" })
+    ...mapState("auth", { loading: "isAuthenticatePending" }),
+    hide() {
+      return this.$route.path === "/login" || this.$route.path === "/register";
+    }
   },
   methods: {
     ...mapActions("auth", ["authenticate"]),
