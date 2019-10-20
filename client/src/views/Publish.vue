@@ -6,27 +6,26 @@
     >Select publish to create template or return to previous page</div>
 
     <v-card flat color="rgb(255, 0, 0, 0)">
-        <v-card-actions>
-    <v-btn x-large color="indigo darken-3" class="white--text" href="/Competencies">
-            <v-icon>mdi-account-arrow-left</v-icon>Back to previous page
-            </v-btn>
+      <v-card-actions>
+        <v-btn x-large color="indigo darken-3" class="white--text" href="/Competencies">
+          <v-icon>mdi-account-arrow-left</v-icon>Back to previous page
+        </v-btn>
         <v-spacer></v-spacer>
-        
-        <v-btn x-large color="indigo darken-3" class="white--text">
-            <v-icon>mdi-publish</v-icon>Publish Interview Guide
-            </v-btn>
-</v-card-actions>
-    </v-card>
 
-    <VueDocPreview value="newteach.pbworks.com%2Ff%2Fele%2Bnewsletter.docx" type="office" />
+        <v-btn x-large color="indigo darken-3" class="white--text">
+          <v-icon>mdi-publish</v-icon>Publish Interview Guide
+        </v-btn>
+      </v-card-actions>
+    </v-card>
+    <div style="height: 900px;">
+      <iframe
+      width="50%"
+      height="100%"
+        src="https://docs.google.com/document/d/e/2PACX-1vRgPLecXwz53hBIn_zpvHrqcmu5grmGuPoaloEAvW4FFy_RFp9yWHQSMQ62ZR_hSw/pub?embedded=true"
+      ></iframe>
+   </div>
   </div>
 </template>
 
 <script>
-import VueDocPreview from "vue-doc-preview";
-export default {
-  components: {
-    VueDocPreview
-  }
-};
 </script>
